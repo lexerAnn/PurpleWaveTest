@@ -38,4 +38,26 @@
             app:nullable="true" />
 
     </fragment>
+    <fragment
+        android:id="@+id/allFilesFragment"
+        android:name="com.purlewave.ui.home.AllFilesFragment"
+        android:label="fragment_all_files"
+        tools:layout="@layout/fragment_all_files" >
+        <action
+            android:id="@+id/action_allFilesFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.purlewave.ui.home.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+
+        <argument
+            android:name="fileDetails"
+            android:defaultValue="@null"
+            app:argType="com.purlewave.data.models.FileModel"
+            app:nullable="true" />
+
+    </fragment>
 </navigation>

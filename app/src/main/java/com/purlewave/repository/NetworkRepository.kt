@@ -21,6 +21,12 @@ class NetworkRepository @Inject constructor(
         return processDataState { networkApi.getRecords() }
     }
 
+    fun getAllFiles(): Flow<DataState<List<FileModel>>>{
+        return processDataState { networkApi.getAllFiles() }
+    }
+
+
+
     fun createRecord(recordRequestModel: RecordRequestModel): Flow<DataState<RecordModel>>{
         return processDataState { networkApi.createRecord(recordRequestModel) }
     }

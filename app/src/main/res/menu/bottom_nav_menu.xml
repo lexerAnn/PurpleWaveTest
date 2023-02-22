@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/baseline_folder_24"
+        android:title="Records" />
+
+
+    <item
+        android:id="@+id/allFilesFragment"
+        android:icon="@drawable/baseline_attach_file_24"
+        android:title="Files" />
+
+
+
+</menu>

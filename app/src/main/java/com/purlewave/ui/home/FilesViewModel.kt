@@ -24,9 +24,17 @@ class FilesViewModel @Inject constructor(
     private val _fileRecordResponse: MutableLiveData<DataState<Any>> = MutableLiveData()
     val fileRecordResponse: LiveData<DataState<Any>> get() = _fileRecordResponse
 
+    private val _allFileRecordResponse: MutableLiveData<DataState<List<FileModel>>> = MutableLiveData()
+    val allFileRecordResponse: LiveData<DataState<List<FileModel>>> get() = _allFileRecordResponse
+
+
 
     fun getFileRecord(id: String) = emitFlowResults(_fileRecordResponse) {
         networkRepository.getFileOnRecord(id)
+    }
+
+    fun getAllFiles() = emitFlowResults(_allFileRecordResponse) {
+        networkRepository.getAllFiles()
     }
 
 }
